@@ -30,7 +30,7 @@ export class LoginComponentComponent implements OnInit {
           localStorage.setItem('userName',f.value.email);
           localStorage.setItem('userId',response.json().emailId);
           localStorage.setItem('lastLogin',new Date().toString());
-          this.router.navigate(['excelComponent']);
+          this.router.navigate(['risk']);
         },
         ( error:Response) => {
           console.log(error);

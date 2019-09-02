@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExcelComponentComponent } from './excel-component.component';
+import { RiskComponentComponent } from './risk-component.component';
 
-describe('ExcelComponentComponent', () => {
-  let component: ExcelComponentComponent;
-  let fixture: ComponentFixture<ExcelComponentComponent>;
+describe('RiskComponentComponent', () => {
+  let component: RiskComponentComponent;
+  let fixture: ComponentFixture<RiskComponentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExcelComponentComponent ]
+      declarations: [ RiskComponentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExcelComponentComponent);
+    fixture = TestBed.createComponent(RiskComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

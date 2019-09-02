@@ -12,5 +12,14 @@ export const environment = {
  *
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
+ *
+ * http://localhost:8080/login?user=tanuj@gmail.com&pass=tanuj
+ *  HTTP://localhost:8080/DeleteRisk/RSK-003
+ * http://localhost:8080/riskDetails
+ * HTTP://localhost:8080/AddRisk
+ * http://localhost:8080/getRisk/RSK-003
+ *
+ *
+ *
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.

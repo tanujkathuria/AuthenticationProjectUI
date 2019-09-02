@@ -8,14 +8,14 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import {LoginServiceService} from './services/login-service.service';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import { ExcelComponentComponent } from './excel-component/excel-component.component';
+import { RiskComponentComponent } from './risk-component/risk-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponentComponent,
-    ExcelComponentComponent
+    RiskComponentComponent
   ],
   imports: [
     BrowserModule,

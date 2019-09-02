@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container">
+
+
+
+  <div class="table-wrapper">
+    <form #f="ngForm" (ngSubmit)="addRisk(f)">
+      <div class="row">
+        <div class="col">
+          <input ngModel #riskId="ngModel"  id="riskId" name ="riskId"  type="text"  class="form-control form-control-md rounded-0 " placeholder="Risk ID"  autofocus />
+        </div>
+        <div class="col">
+          <input ngModel #title="ngModel"  id="title" name ="title"  type="text"  class="form-control form-control-md rounded-0 " placeholder="Title"  autofocus />
+        </div>
+      </div> <br>
+      <div class="row">
+        <div class="col">
+          <input ngModel #status="ngModel"  id="status" name ="status"  type="text"  class="form-control form-control-md rounded-0 " placeholder="Status"  autofocus />
+        </div>
+        <div class="col">
+          <input ngModel #owner="ngModel"  id="owner" name ="owner"  type="text"  class="form-control form-control-md rounded-0 " placeholder="Risk Owner"  autofocus />
+        </div>
+      </div> <br>
+      <div class="row">
+        <div class="col">
+          <input ngModel #organization="ngModel"  id="organization" name ="organization"  type="text"  class="form-control form-control-md rounded-0 " placeholder="Organization"  autofocus />
+        </div>
+        <div class="col">
+          <input ngModel #createdBy="ngModel"  id="createdBy" name ="createdBy"  type="text"  class="form-control form-control-md rounded-0 " placeholder="Created By"  autofocus />
+        </div>
+      </div>
+
+    <br>
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-8"><h4>Risk <b>List</b></h4></div>
+        <div class="col-sm-4">
+          <button  type="submit" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+        </div>
+      </div>
+    </div>
+    </form>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Risk ID</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Level</th>
+        <th>Owner</th>
+        <th>Manager</th>
+        <th>Org</th>
+        <th>Created On</th>
+        <th>Approved By</th>
+        <th>Approved On</th>
+        <th>#</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let risk of risks">
+        <td>{{risk.riskId}}</td>
+        <td>{{risk.title}}</td>
+        <td>{{risk.status}}</td>
+        <td>{{risk.level}}</td>
+        <td>{{risk.owner}}</td>
+        <td>{{risk.manager}}</td>
+        <td>{{risk.organization}}</td>
+        <td>{{risk.createdOn|date}}</td>
+        <td>{{risk.approvedBy}}</td>
+        <td>{{risk.approvedOn|date}}</td>
+        <td>
+          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+          <a class="delete" (click)="deleteRisk(risk.riskId)" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+        </td>
+
+      </tr>
+      <!--<tr>
+        <td>John Doe</td>
+        <td>Administration</td>
+        <td>(171) 555-2222</td>
+        <td>
+          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Peter Parker</td>
+        <td>Customer Service</td>
+        <td>(313) 555-5735</td>
+        <td>
+          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Fran Wilson</td>
+        <td>Human Resources</td>
+        <td>(503) 555-9931</td>
+        <td>
+          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+        </td>
+      </tr>-->
+      </tbody>
+    </table>
+  </div>
+</div>
