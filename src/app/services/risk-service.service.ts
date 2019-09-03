@@ -32,12 +32,10 @@ export class RiskServiceService {
         "approvedOn" : "2018-04-23T18:25:43.511Z"
       }
     ));
-    console.log(risk);
     return this.http.post(this.postURL,risk);
   }
 
   public deleteRisk(riskId){
     return this.http.delete(this.deleteURL+riskId);
-
   }
 }

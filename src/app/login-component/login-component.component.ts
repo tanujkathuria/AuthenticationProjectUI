@@ -11,6 +11,8 @@ export class LoginComponentComponent implements OnInit {
 
 
   error=false;
+  roles: any;
+
 
   constructor(private loginService:LoginServiceService,private router:Router) {
 
@@ -30,6 +32,8 @@ export class LoginComponentComponent implements OnInit {
           localStorage.setItem('userName',f.value.email);
           localStorage.setItem('userId',response.json().emailId);
           localStorage.setItem('lastLogin',new Date().toString());
+          localStorage.setItem('roles',response.json().roles);
+          console.log(response.json().roles);
           this.router.navigate(['risk']);
         },
         ( error:Response) => {
